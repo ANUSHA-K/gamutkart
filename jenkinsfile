@@ -1,0 +1,15 @@
+pipeline {
+          agent any
+          
+          stages {
+             stage ('checkout'){
+               steps {
+                     checkout scm
+                     }
+                stage ('build'){
+                  steps {
+                    sh '/home/anusha/softwares/apache-maven-3.5.0/bin/mvn install'
+                         }
+                       }
+                         }
+             }            
